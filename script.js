@@ -1,5 +1,5 @@
 
-const container = document.querySelector(".container");
+const container = document.querySelector(".gridContainer");
 
 // making grid divs
 /*const grid = document.createElement("div");
@@ -13,7 +13,7 @@ grid2.textContent = "grid2";
 container.appendChild(grid); */
 
 
-for(let i = 1; i <= 16; i++) {
+for (let i = 1; i <= 16; i++) {
 
     const grid = document.createElement("div");
     grid.textContent = "grid";
@@ -28,7 +28,7 @@ for(let i = 1; i <= 16; i++) {
 
 //function under only worked on a single random node
 
-grid.addEventListener("onmouseover", (e) => {
+/*grid.addEventListener("onmouseover", (e) => {
     e.target.style.color = "blue";
 } ) 
 
@@ -38,22 +38,51 @@ function changeBackground() {
 
  function changeBackground2() {
     grid.style.color = "black"; 
- } 
+ } */
 
 
 
  } // for ending
 
 
+
+
+ let gridButton = document.querySelector(".popUpButton");
+
+ gridButton.addEventListener("click", () => {
+    //container.removeChild(container.firstElementChild);
+    let popUpMessage = prompt("Write number of squares per side for the grid");
+    if ((/^[0-9]+$/.test(popUpMessage)) && (popUpMessage <= 100)) {
+        console.log("pass");
+        //popUpMessage = prompt("Write number of squares per side for the grid");
+    }
+
+    else {
+        //resetGrid();
+        console.log("fail")
+        alert("write a number");
+    } 
+ })
+
+
+ function resetGrid () {
+    while (container.hasChildNodes()) {
+        container.removeChild(container.firstChild);
+    }
+ }
+
+
+
+
  // function under added effect on all nodes, nut need only one and one
- const grids = document.querySelectorAll("div");
+ /*const grids = document.querySelectorAll("div");
 
 
  function changeColor() {
     grids.forEach(e => {
         e.style.color = "blue";
       })
- } 
+ } */
 
  
 

@@ -1,13 +1,26 @@
 
 
-
 .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.popUpButton {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    
+}
+
+.gridContainer {
     width: 500px;
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
-    justify-content: flex-end;
-    margin: 400px 400px;
+   /* justify-content: flex-end;
+    margin: 400px 400px; */
     
 }
 
@@ -20,6 +33,8 @@
  .grid:hover {
     background-color: blue;
  }
+
+
 
 
 
