@@ -13,13 +13,16 @@ grid2.textContent = "grid2";
 container.appendChild(grid); */
 
 
-for (let i = 1; i <= 16; i++) {
+for (let i = 1; i <= 256; i++) {
     const grid = document.createElement("div");
-    grid.textContent = "grid";
+    //grid.textContent = "grid";
     grid.classList.add("grid");
     //grid.setAttribute("onmouseenter", "changeBackground();");
     //grid.setAttribute("onmouseleave", "changeBackground2();");
     //grid.setAttribute("onmouseenter", "changeColor();")
+    grid.addEventListener('mouseover', function(e){
+        e.target.style.backgroundColor = "blue";
+    })
     container.appendChild(grid);
     //grid.onmouseover = changeBackground();
     
@@ -40,8 +43,9 @@ function changeBackground() {
  } */
 
 
-
  } // for ending
+
+ 
 
 
 
@@ -57,11 +61,14 @@ function changeBackground() {
         //popUpMessage = prompt("Write number of squares per side for the grid");
 
         for (let i = 1; i <= popUpMessage; i++) {
-            for (let j = 1; j <= popUpMessage; j++) {
+           for (let j = 1; j <= popUpMessage; j++) {
               i * j;
               const grid = document.createElement("div");
-              grid.textContent = "grid";
+              //grid.textContent = "grid";
               grid.classList.add("grid");
+              grid.addEventListener('mouseover', function(e){
+                e.target.style.backgroundColor = "blue";
+            })
               container.appendChild(grid);
            }
         }
@@ -69,7 +76,7 @@ function changeBackground() {
 
     else {
         console.log("fail")
-        alert("write a number");
+        alert("write a not to big number");
     } 
  }) 
 
