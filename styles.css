@@ -9,35 +9,32 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
+    
+} 
 
 .popUpButton {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-    
 }
+
 
 .gridContainer {
     width: 700px;
     height: 700px; 
     border: solid 2px black;
     display: flex;
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap; 
+
 }
+
 
 .grid {
    border: solid 1px black; 
-   padding: 2px; 
-   /* height: 20px; */
-   display: flex;
-   flex-wrap: wrap;
-   flex-grow: 1;
-   flex-basis: auto;
-
+   padding: 2px;
+   flex-grow: 1; 
  }
+
 
  .grid:hover {
     background-color: blue;

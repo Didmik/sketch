@@ -13,7 +13,7 @@ grid2.textContent = "grid2";
 container.appendChild(grid); */
 
 
-for (let i = 1; i <= 256; i++) {
+ for (let i = 1; i <= 256; i++) {
     const grid = document.createElement("div");
     //grid.textContent = "grid";
     grid.classList.add("grid");
@@ -24,7 +24,7 @@ for (let i = 1; i <= 256; i++) {
         e.target.style.backgroundColor = "blue";
     })
     container.appendChild(grid);
-    //grid.onmouseover = changeBackground();
+    //grid.onmouseover = changeBackground();  
     
 
 
